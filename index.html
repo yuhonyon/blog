@@ -165,11 +165,43 @@
       
         <h1 id="兼容HTML"><a href="#兼容HTML" class="headerlink" title="兼容HTML"></a>兼容HTML</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//这是一个普通table。</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>Foo<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div><div class="line"></div><div class="line">//这是另一个普通table。</div></pre></td></tr></table></figure>
 <p>请注意，在 HTML 区块标签间的 Markdown 格式语法将不会被处理。比如，你在 HTML 区块内使用 Markdown 样式的<em>强调</em>会没有效果。</p>
-<p></p></p>
-<p>#特殊字符自动转换<br>
-        
-          <a class="article-more-a" href="/blog/一篇文章/#more">more >></a>
-        
+<p></p><p></p>
+<p>#特殊字符自动转换</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="number">4</span>&lt;<span class="number">5</span></div></pre></td></tr></table></figure>
+<p>Markdown 将会把它转换为：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="number">4</span> &amp;lt; <span class="number">5</span></div></pre></td></tr></table></figure>
+<p>#语法</p>
+<p>##段落/换行<br>在插入处先按入两个以上的空格然后回车</p>
+<p>##标题<br>Markdown 支持两种标题的语法</p>
+<p>####用底线的形式，利用 = （最高阶标题）和 - （第二阶标题），例如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">This is an H1</div><div class="line">=============</div><div class="line"></div><div class="line">This is an H2</div><div class="line">-------------</div></pre></td></tr></table></figure></p>
+<p>任何数量的 = 和 - 都可以有效果</p>
+<p>####在行首插入 1 到 6 个 # ，对应到标题 1 到 6 阶，例如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># 这是 H1</div><div class="line"></div><div class="line">## 这是 H2</div><div class="line"></div><div class="line">###### 这是 H6</div></pre></td></tr></table></figure></p>
+<p>##引用<br>在每行的最前面加上 &gt;<br>Markdown 也允许你偷懒只在整个段落的第一行最前面加上 &gt;<br>引用的区块内也可以使用其他的 Markdown 语法</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&gt; ## 这是一个标题。</div><div class="line">&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,</div><div class="line">consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.</div><div class="line">Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</div><div class="line"></div><div class="line">&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse</div><div class="line">id sem consectetuer libero luctus adipiscing.</div></pre></td></tr></table></figure>
+<p>##列表<br>Markdown 支持有序列表和无序列表。</p>
+<p>无序列表使用星号、加号或是减号作为列表标记：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">*   Red</div><div class="line">*   Green</div><div class="line">*   Blue</div></pre></td></tr></table></figure>
+<p>有序列表则使用数字接着一个英文句点:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1.  Bird</div><div class="line">2.  McHale</div><div class="line">3.  Parish</div></pre></td></tr></table></figure>
+<p>列表项目可以包含多个段落，每个项目下的段落都必须缩进 4 个空格或是 1 个制表符：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">*   This is a list item with two paragraphs.</div><div class="line"></div><div class="line">    This is the second paragraph in the list item. You're</div><div class="line">only required to indent the first line. Lorem ipsum dolor</div><div class="line">sit amet, consectetuer adipiscing elit.</div><div class="line"></div><div class="line">*   Another item in the same list.</div></pre></td></tr></table></figure>
+<p>##代码<br>使用4个空格或者tab<br>    这是一个普通段落：</p>
+<pre><code>这是一个代码区块。
+</code></pre><p>或者使用反引号</p>
+<p>##分割线<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">* * *</div><div class="line"></div><div class="line">***</div><div class="line"></div><div class="line">*****</div><div class="line"></div><div class="line">- - -</div><div class="line"></div><div class="line">---------------------------------------</div></pre></td></tr></table></figure></p>
+<hr>
+<p>##链接<br>Markdown中有两种方式，实现链接，分别为内联方式和引用方式。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">内联方式：This is an [example link](http://example.com/).</div><div class="line">引用方式：</div><div class="line">I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].  </div><div class="line"></div><div class="line">[1]: http://google.com/        "Google" </div><div class="line">[2]: http://search.yahoo.com/  "Yahoo Search" </div><div class="line">[3]: http://search.msn.com/    "MSN Search"</div></pre></td></tr></table></figure></p>
+<p>内联方式：This is an <a href="http://example.com/" target="_blank" rel="external">example link</a>.<br>引用方式：<br>I get 10 times more traffic from <a href="http://google.com/" title="Google" target="_blank" rel="external">Google</a> than from <a href="http://search.yahoo.com/" title="Yahoo Search" target="_blank" rel="external">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search" target="_blank" rel="external">MSN</a>.  </p>
+<p>##自动链接<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">http:</span>//<span class="attr">example.com</span>/&gt;</span></div></pre></td></tr></table></figure></p>
+<p><a href="http://example.com/" target="_blank" rel="external">http://example.com/</a></p>
+<p>##图片<br>图片的处理方式和链接的处理方式，非常的类似。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">内联方式：![alt text](https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png "Title")</div><div class="line">引用方式：</div><div class="line">![alt text][id] </div><div class="line"></div><div class="line">[id]: https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png "Title"</div></pre></td></tr></table></figure>
+<p>内联方式：<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" alt="alt text" title="Title"><br>引用方式：<br><img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" alt="alt text" title="Title"> </p>
+<p>##强调</p>
+<p>Markdown 使用星号（<em>）和底线（_）作为标记强调字词的符号，被 </em> 或 <em> 包围的字词会被转成用 <em> 标签包围，用两个 * 或 </em> 包起来的话，则会被转成 <strong>，例如：</strong></em></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">*single asterisks*</div><div class="line"></div><div class="line">_single underscores_</div><div class="line"></div><div class="line">**double asterisks**</div><div class="line"></div><div class="line">__double underscores__</div></pre></td></tr></table></figure>
+<p>你可以随便用你喜欢的样式，唯一的限制是，你用什么符号开启标签，就要用什么符号结束。<br>但是如果你的 * 和 _ 两边都有空白的话，它们就只会被当成普通的符号。<br>如果要在文字前后直接插入普通的星号或底线，你可以用反斜线</p>
+
       
 
       
@@ -390,7 +422,7 @@
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">山炮</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">一个高颜值的前端农</div>
   	  	
     	</section>
     

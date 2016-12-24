@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yfyld.online/"/>
-  <updated>2016-12-24T09:34:53.110Z</updated>
+  <updated>2016-12-24T09:37:51.931Z</updated>
   <id>http://yfyld.online/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yfyld.online/one/"/>
     <id>http://yfyld.online/one/</id>
     <published>2016-12-24T16:31:35.000Z</published>
-    <updated>2016-12-24T09:34:53.110Z</updated>
+    <updated>2016-12-24T09:37:51.931Z</updated>
     
     <content type="html"><![CDATA[<h1 id="兼容HTML"><a href="#兼容HTML" class="headerlink" title="兼容HTML"></a>兼容HTML</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//这是一个普通table。</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>Foo<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div><div class="line"></div><div class="line">//这是另一个普通table。</div></pre></td></tr></table></figure>
 <p>请注意，在 HTML 区块标签间的 Markdown 格式语法将不会被处理。比如，你在 HTML 区块内使用 Markdown 样式的<em>强调</em>会没有效果。</p>
@@ -76,7 +76,7 @@
     <link href="http://yfyld.online/markdown/"/>
     <id>http://yfyld.online/markdown/</id>
     <published>2016-12-14T16:31:35.000Z</published>
-    <updated>2016-12-24T09:34:53.110Z</updated>
+    <updated>2016-12-24T09:37:51.931Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Cmd-Markdown-简明语法手册"><a href="#Cmd-Markdown-简明语法手册" class="headerlink" title="Cmd Markdown 简明语法手册"></a>Cmd Markdown 简明语法手册</h1><p>标签： Cmd-Markdown</p>
 <hr>
@@ -264,7 +264,7 @@
     <link href="http://yfyld.online/canvasDemo/"/>
     <id>http://yfyld.online/canvasDemo/</id>
     <published>2016-12-05T20:03:48.000Z</published>
-    <updated>2016-12-24T09:34:53.110Z</updated>
+    <updated>2016-12-24T09:37:51.931Z</updated>
     
     <content type="html"><![CDATA[<iframe width="100%" height="300" src="//jsrun.net/8VpKp/embedded/all/light/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 

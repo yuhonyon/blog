@@ -3,9 +3,11 @@
 
 
     
+    
+    
   <url>
-    <loc>https://yuhonyon.github.io/blog/blog/canvasDemo/</loc>
-    <lastmod>2016-12-24T09:20:37.120Z</lastmod>
+    <loc>https://yuhonyon.github.io/canvasDemo/</loc>
+    <lastmod>2016-12-24T09:28:02.966Z</lastmod>
     <data>
         <display>
         <title>canvas demo</title>
@@ -19,25 +21,8 @@
 
     
   <url>
-    <loc>https://yuhonyon.github.io/blog/blog/markdown/</loc>
-    <lastmod>2016-12-24T09:20:37.120Z</lastmod>
-    <data>
-        <display>
-        <title>markdown 语法</title>
-        <pubTime>2016-12-14T16:31:35.000Z</pubTime>
-        
-        <tag>markdown</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://yuhonyon.github.io/blog/blog/one/</loc>
-    <lastmod>2016-12-24T09:20:37.120Z</lastmod>
+    <loc>https://yuhonyon.github.io/one/</loc>
+    <lastmod>2016-12-24T09:28:02.966Z</lastmod>
     <data>
         <display>
         <title>markdown 语法</title>
@@ -52,6 +37,21 @@
     </url>
 
     
-    
+  <url>
+    <loc>https://yuhonyon.github.io/markdown/</loc>
+    <lastmod>2016-12-24T09:28:02.966Z</lastmod>
+    <data>
+        <display>
+        <title>markdown 语法</title>
+        <pubTime>2016-12-14T16:31:35.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
     
 </urlset>

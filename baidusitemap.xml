@@ -4,8 +4,59 @@
 
     
   <url>
+    <loc>http://yfyld.online/markdown/</loc>
+    <lastmod>2017-03-15T02:20:53.267Z</lastmod>
+    <data>
+        <display>
+        <title>markdown 语法</title>
+        <pubTime>2016-12-14T16:31:35.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yfyld.online/canvasAPI/</loc>
+    <lastmod>2017-03-15T02:20:53.267Z</lastmod>
+    <data>
+        <display>
+        <title>markdown 语法</title>
+        <pubTime>2016-12-24T16:31:35.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yfyld.online/canvasDemo/</loc>
+    <lastmod>2017-03-15T02:20:53.267Z</lastmod>
+    <data>
+        <display>
+        <title>markdown 语法</title>
+        <pubTime>2016-12-14T16:31:35.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yfyld.online/one/</loc>
-    <lastmod>2016-12-24T09:42:16.369Z</lastmod>
+    <lastmod>2017-03-15T02:20:53.267Z</lastmod>
     <data>
         <display>
         <title>markdown 语法</title>
@@ -21,37 +72,5 @@
 
     
     
-    
-  <url>
-    <loc>http://yfyld.online/canvasDemo/</loc>
-    <lastmod>2016-12-24T09:42:16.353Z</lastmod>
-    <data>
-        <display>
-        <title>canvas demo</title>
-        <pubTime>2016-12-05T20:03:48.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yfyld.online/markdown/</loc>
-    <lastmod>2016-12-24T09:42:16.353Z</lastmod>
-    <data>
-        <display>
-        <title>markdown 语法</title>
-        <pubTime>2016-12-14T16:31:35.000Z</pubTime>
-        
-        <tag>markdown</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
     
 </urlset>

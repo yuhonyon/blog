@@ -4,25 +4,8 @@
 
     
   <url>
-    <loc>http://yfyld.online/markdown/</loc>
-    <lastmod>2017-08-30T10:20:24.411Z</lastmod>
-    <data>
-        <display>
-        <title>markdown 语法</title>
-        <pubTime>2016-12-14T16:31:35.000Z</pubTime>
-        
-        <tag>markdown</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yfyld.online/one/</loc>
-    <lastmod>2017-08-30T10:20:24.411Z</lastmod>
+    <loc>http://yfyld.online/canvasAPI/</loc>
+    <lastmod>2017-10-17T03:37:43.608Z</lastmod>
     <data>
         <display>
         <title>markdown 语法</title>
@@ -37,11 +20,9 @@
     </url>
 
     
-    
-    
   <url>
     <loc>http://yfyld.online/iosBug1/</loc>
-    <lastmod>2017-08-30T10:20:24.396Z</lastmod>
+    <lastmod>2017-10-17T03:37:43.608Z</lastmod>
     <data>
         <display>
         <title>ios 冒泡 bug</title>
@@ -58,7 +39,7 @@
     
   <url>
     <loc>http://yfyld.online/canvasDemo/</loc>
-    <lastmod>2017-08-30T10:20:24.396Z</lastmod>
+    <lastmod>2017-10-17T03:37:43.608Z</lastmod>
     <data>
         <display>
         <title>markdown 语法</title>
@@ -74,8 +55,25 @@
 
     
   <url>
-    <loc>http://yfyld.online/canvasAPI/</loc>
-    <lastmod>2017-08-30T10:20:24.396Z</lastmod>
+    <loc>http://yfyld.online/markdown/</loc>
+    <lastmod>2017-10-17T03:37:43.608Z</lastmod>
+    <data>
+        <display>
+        <title>markdown 语法</title>
+        <pubTime>2016-12-14T16:31:35.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yfyld.online/one/</loc>
+    <lastmod>2017-10-17T03:37:43.608Z</lastmod>
     <data>
         <display>
         <title>markdown 语法</title>
@@ -92,7 +90,7 @@
     
   <url>
     <loc>http://yfyld.online/2017/glob/</loc>
-    <lastmod>2017-08-30T10:20:24.396Z</lastmod>
+    <lastmod>2017-10-17T03:37:43.608Z</lastmod>
     <data>
         <display>
         <title>glob</title>
@@ -106,5 +104,22 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>http://yfyld.online/2017/%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9AProxy%20VS%20Object.definProperty/</loc>
+    <lastmod>2017-10-17T03:37:43.608Z</lastmod>
+    <data>
+        <display>
+        <title>数据绑定Proxy VS Object.definProperty</title>
+        <pubTime>2017-10-16T11:32:00.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
     
 </urlset>

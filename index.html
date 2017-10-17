@@ -272,6 +272,80 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-2017/数据绑定Proxy VS Object.definProperty" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/数据绑定Proxy VS Object.definProperty/" class="article-date">
+      <time datetime="2017-10-16T11:32:00.000Z" itemprop="datePublished">2017-10-16</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/数据绑定Proxy VS Object.definProperty/">数据绑定Proxy VS Object.definProperty</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="Object-defineProperty"><a href="#Object-defineProperty" class="headerlink" title="Object.defineProperty"></a>Object.defineProperty</h2><p><code>Object.defineProperty(obj, prop, descriptor)</code></p>
+<blockquote>
+<p>Object.defineProperty() 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank" rel="external">详情</a></p>
+</blockquote>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p><strong>obj</strong><br>需要被操作的目标对象</p>
+<p><strong>prop</strong><br>目标对象需要定义或修改的属性的名称。</p>
+<p><strong>descriptor</strong><br>将被定义或修改的属性的描述符。</p>
+<p><strong>返回值</strong><br>被传递给函数的对象。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> aa=&#123;<span class="attr">age</span>:<span class="number">11</span>&#125;</div><div class="line"><span class="built_in">Object</span>.defineProperty(ironman, <span class="string">'age'</span>, &#123;</div><div class="line">  set (val) &#123;</div><div class="line">    element.innerHTML=<span class="string">`这sb今年<span class="subst">$&#123;age&#125;</span>岁了`</span></div><div class="line">    <span class="keyword">return</span> val</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>使用set()方法去监测属性变化，但是对于一个数组使用value()方法来代替</p>
+<h2 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h2><p><code>var proxy = new Proxy(target, handler);</code></p>
+<blockquote>
+<p>Proxy 用于修改某些操作的默认行为，等同于在语言层面做出修改，所以属于一种“元编程”（meta programming），即对编程语言进行编程。<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy" target="_blank" rel="external">详情</a></p>
+</blockquote>
+<h3 id="参数-1"><a href="#参数-1" class="headerlink" title="参数"></a>参数</h3><p><strong>target</strong><br>一个目标对象(可以是任何类型的对象，包括本机数组，函数，甚至另一个代理)用Proxy来包装。</p>
+<p><strong>handler</strong><br>一个对象，其属性是当执行一个操作时定义代理的行为的函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> aa=&#123;<span class="attr">age</span>:<span class="number">23</span>&#125;</div><div class="line"><span class="keyword">let</span> proxy = <span class="keyword">new</span> <span class="built_in">Proxy</span>(aa, &#123;</div><div class="line">  set (target, property, value) &#123;</div><div class="line">    target[property] = value</div><div class="line">    element.innerHTML=<span class="string">`这sb今年<span class="subst">$&#123;age&#125;</span>岁了`</span></div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Vue</span></span>&#123;</div><div class="line">  <span class="keyword">constructor</span>(options)&#123;</div><div class="line">    <span class="keyword">this</span>.$data=options.data;</div><div class="line">    <span class="keyword">this</span>.$el=options.el;</div><div class="line">    <span class="keyword">this</span>.$template=options.template;</div><div class="line">    <span class="keyword">this</span>._render(<span class="keyword">this</span>.$template,<span class="keyword">this</span>.$data)</div><div class="line">  &#125;</div><div class="line">  $setData (dataObj, fn) &#123;</div><div class="line">    <span class="keyword">let</span> self = <span class="keyword">this</span></div><div class="line">    <span class="keyword">let</span> once = <span class="literal">false</span></div><div class="line">    <span class="keyword">let</span> $d = <span class="keyword">new</span> <span class="built_in">Proxy</span>(dataObj, &#123;</div><div class="line">      set (target, property, value) &#123;</div><div class="line">        <span class="keyword">if</span> (!once) &#123;</div><div class="line">          target[property] = value</div><div class="line">          once = <span class="literal">true</span></div><div class="line">          self._render(self.$template, self.$data)</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">    fn($d)</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  _render (tplString, data) &#123;</div><div class="line">    <span class="keyword">this</span>.$el.innerHTML = <span class="keyword">this</span>._replaceFun(tplString, data)</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  _replaceFun(str, data) &#123;</div><div class="line">    <span class="keyword">let</span> self = <span class="keyword">this</span></div><div class="line">    <span class="keyword">return</span> str.replace(<span class="regexp">/&#123;&#123;([^&#123;&#125;]*)&#125;&#125;/g</span>, (a, b) =&gt; &#123;</div><div class="line">      <span class="keyword">let</span> r = self._getObjProp(data, b);</div><div class="line">      <span class="keyword">if</span> (<span class="keyword">typeof</span> r === <span class="string">'string'</span> || <span class="keyword">typeof</span> r === <span class="string">'number'</span>) &#123;</div><div class="line">        <span class="keyword">return</span> r</div><div class="line">      &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> self._getObjProp(r, b.split(<span class="string">'.'</span>)[<span class="number">1</span>])</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  _getObjProp (obj, propsName) &#123;</div><div class="line">    <span class="keyword">let</span> propsArr = propsName.split(<span class="string">'.'</span>)</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">rec</span>(<span class="params">o, pName</span>) </span>&#123;</div><div class="line">      <span class="keyword">if</span> (!o[pName] <span class="keyword">instanceof</span> <span class="built_in">Array</span> &amp;&amp; o[pName] <span class="keyword">instanceof</span> <span class="built_in">Object</span>) &#123;</div><div class="line">        <span class="keyword">return</span> rec(o[pName], propsArr.shift())</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">return</span> o[pName]</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> rec(obj, propsArr.shift())</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>这sb今年&#123;&#123;age&#125;&#125;岁了<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"input"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">  <span class="keyword">let</span> template=<span class="built_in">document</span>.querySelector(<span class="string">'#app'</span>).innerHTML</span></div><div class="line"><span class="javascript">  <span class="keyword">let</span> vue=<span class="keyword">new</span> Vue(&#123;</span></div><div class="line"><span class="undefined">    template:template,</span></div><div class="line"><span class="javascript">    el:<span class="built_in">document</span>.querySelector(<span class="string">'#app'</span>),</span></div><div class="line"><span class="undefined">    data:&#123;</span></div><div class="line"><span class="undefined">      age:24</span></div><div class="line"><span class="undefined">    &#125;</span></div><div class="line"><span class="undefined">  &#125;)</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.querySelector(<span class="string">'#input'</span>).oninput = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span></div><div class="line"><span class="undefined">  vue.$setData(vue.$data, ($d) =&gt; &#123;</span></div><div class="line"><span class="undefined">    $d.age = e.target.value</span></div><div class="line"><span class="undefined">  &#125;)</span></div><div class="line"><span class="undefined">&#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-2017/glob" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -314,71 +388,6 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp-node/">gulp node</a></li></ul>
     </div>
 
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-iosBug1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/iosBug1/" class="article-date">
-      <time datetime="2016-12-24T16:31:35.000Z" itemprop="datePublished">2016-12-24</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/iosBug1/">ios 冒泡 bug</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.on(<span class="string">'click'</span>,<span class="string">'.aaa'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="comment">//如果.aaa不是img a 的时候不触发</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>在ios里点击事件,使用事件代理到 <code>document</code> 或<code>body</code>,不能触发<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/iosBug1/#more">more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -443,6 +452,71 @@
       
         <p class="article-more-link">
           <a href="/canvasAPI/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-iosBug1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/iosBug1/" class="article-date">
+      <time datetime="2016-12-24T16:31:35.000Z" itemprop="datePublished">2016-12-24</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/iosBug1/">ios 冒泡 bug</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.on(<span class="string">'click'</span>,<span class="string">'.aaa'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="comment">//如果.aaa不是img a 的时候不触发</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>在ios里点击事件,使用事件代理到 <code>document</code> 或<code>body</code>,不能触发<br>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/iosBug1/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

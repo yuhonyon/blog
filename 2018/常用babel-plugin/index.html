@@ -15,18 +15,17 @@
 
 
 
-<meta name="description" content="问题123document.on(&apos;click&apos;,&apos;.aaa&apos;,function()&amp;#123;    //如果.aaa不是img a 的时候不触发&amp;#125;); 在ios里点击事件,使用事件代理到 document 或body,不能触发">
-<meta name="keywords" content="ios">
+<meta name="description" content="注意:presets是倒叙 plugins是正序  transform-function-bind 函数绑定’::’  安装:1cnpm i babel-plugin-transform-function-bind -D 配置:1&quot;plugins&quot;: [&quot;transform-function-bind&quot;] 例子:123456789101112131415obj::func// 相当于：func.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ios 冒泡 bug">
-<meta property="og:url" content="http://yfyld.online/iosBug1/index.html">
+<meta property="og:title" content="常用babel-plugin">
+<meta property="og:url" content="http://yfyld.online/2018/常用babel-plugin/index.html">
 <meta property="og:site_name" content="yufangyang blog">
-<meta property="og:description" content="问题123document.on(&apos;click&apos;,&apos;.aaa&apos;,function()&amp;#123;    //如果.aaa不是img a 的时候不触发&amp;#125;); 在ios里点击事件,使用事件代理到 document 或body,不能触发">
+<meta property="og:description" content="注意:presets是倒叙 plugins是正序  transform-function-bind 函数绑定’::’  安装:1cnpm i babel-plugin-transform-function-bind -D 配置:1&quot;plugins&quot;: [&quot;transform-function-bind&quot;] 例子:123456789101112131415obj::func// 相当于：func.">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2018-10-02T12:28:03.423Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ios 冒泡 bug">
-<meta name="twitter:description" content="问题123document.on(&apos;click&apos;,&apos;.aaa&apos;,function()&amp;#123;    //如果.aaa不是img a 的时候不触发&amp;#125;); 在ios里点击事件,使用事件代理到 document 或body,不能触发">
+<meta name="twitter:title" content="常用babel-plugin">
+<meta name="twitter:description" content="注意:presets是倒叙 plugins是正序  transform-function-bind 函数绑定’::’  安装:1cnpm i babel-plugin-transform-function-bind -D 配置:1&quot;plugins&quot;: [&quot;transform-function-bind&quot;] 例子:123456789101112131415obj::func// 相当于：func.">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +55,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>ios 冒泡 bug | yufangyang blog</title>
+<title>常用babel-plugin | yufangyang blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -273,11 +272,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-iosBug1" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-2018/常用babel-plugin" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/iosBug1/" class="article-date">
-      <time datetime="2016-12-24T08:31:35.000Z" itemprop="datePublished">2016-12-24</time>
+      <a href="/2018/常用babel-plugin/" class="article-date">
+      <time datetime="2018-05-03T09:36:00.000Z" itemprop="datePublished">2018-05-03</time>
 </a>
 
 
@@ -292,7 +291,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      ios 冒泡 bug
+      常用babel-plugin
     </h1>
   
 
@@ -302,10 +301,6 @@
         
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
-    </div>
-
         <div class="clearfix"></div>
       </div>
       
@@ -313,13 +308,46 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.on(<span class="string">'click'</span>,<span class="string">'.aaa'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//如果.aaa不是img a 的时候不触发</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>在ios里点击事件,使用事件代理到 <code>document</code> 或<code>body</code>,不能触发<br><a id="more"></a></p>
-<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>ios 系统bug</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ul>
-<li>给​目标元素加一条样式规则 <code>{cursor: pointer}</code>;</li>
-<li>事件代理到body下面的容器</li>
-</ul>
+        <p><strong><em> 注意:presets是倒叙 plugins是正序 </em></strong></p>
+<h1 id="transform-function-bind"><a href="#transform-function-bind" class="headerlink" title="transform-function-bind"></a>transform-function-bind</h1><blockquote>
+<p>函数绑定’::’</p>
+</blockquote>
+<p>安装:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i babel-plugin-transform-function-bind -D</span><br></pre></td></tr></table></figure></p>
+<p>配置:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"plugins": ["transform-function-bind"]</span><br></pre></td></tr></table></figure></p>
+<p>例子:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">obj::func</span><br><span class="line"><span class="comment">// 相当于：</span></span><br><span class="line">func.bind(obj)</span><br><span class="line"></span><br><span class="line">::obj.func</span><br><span class="line"><span class="comment">// 相当于：</span></span><br><span class="line">obj.func.bind(obj)</span><br><span class="line"></span><br><span class="line">obj::func(val)</span><br><span class="line"><span class="comment">// 相当于：</span></span><br><span class="line">func.call(obj, val)</span><br><span class="line"></span><br><span class="line">::obj.func(val)</span><br><span class="line"><span class="comment">// 相当于：</span></span><br><span class="line">obj.func.call(obj, val)</span><br></pre></td></tr></table></figure></p>
+<h1 id="transform-do-expressions"><a href="#transform-do-expressions" class="headerlink" title="transform-do-expressions"></a>transform-do-expressions</h1><blockquote>
+<p>解析do{}表达式,主要应用jsx</p>
+</blockquote>
+<p>安装:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i babel-plugin-transform-do-expressions -D</span><br></pre></td></tr></table></figure></p>
+<p>配置:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"plugins": ["transform-do-expressions"]</span><br></pre></td></tr></table></figure></p>
+<p>例子:<br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Component = <span class="function"><span class="params">props</span> =&gt;</span></span><br><span class="line">  &lt;div className=<span class="string">'myComponent'</span>&gt;</span><br><span class="line">    &#123;<span class="keyword">do</span> &#123;</span><br><span class="line">      <span class="keyword">if</span>(color === <span class="string">'blue'</span>) &#123; &lt;BlueComponent/&gt;; &#125;</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">if</span>(color === <span class="string">'red'</span>) &#123; &lt;RedComponent/&gt;; &#125;</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">if</span>(color === <span class="string">'green'</span>) &#123; &lt;GreenComponent/&gt;; &#125;</span><br><span class="line">    &#125;&#125;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="transform-es2015-modules-commonjs"><a href="#transform-es2015-modules-commonjs" class="headerlink" title="transform-es2015-modules-commonjs"></a>transform-es2015-modules-commonjs</h1><blockquote>
+<p>转es6 modules 为commonjs模式</p>
+</blockquote>
+<p>安装:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i babel-plugin-transform-es2015-modules-commonjs -D</span><br></pre></td></tr></table></figure></p>
+<p>配置:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"plugins": ["transform-es2015-modules-commonjs"]</span><br></pre></td></tr></table></figure></p>
+<h1 id="transform-async-to-generator"><a href="#transform-async-to-generator" class="headerlink" title="transform-async-to-generator"></a>transform-async-to-generator</h1><blockquote>
+<p>解析async</p>
+</blockquote>
+<p>安装:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i babel-plugin-transform-async-to-generator -D</span><br></pre></td></tr></table></figure></p>
+<p>配置:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"plugins": ["transform-async-to-generator"]</span><br></pre></td></tr></table></figure></p>
+<h1 id="transform-export-extensions"><a href="#transform-export-extensions" class="headerlink" title="transform-export-extensions"></a>transform-export-extensions</h1><blockquote>
+<p>解析export-from</p>
+</blockquote>
+<p>安装:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i babel-plugin-transform-export-extensions -D</span><br></pre></td></tr></table></figure></p>
+<p>配置:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"plugins": ["transform-export-extensions"]</span><br></pre></td></tr></table></figure></p>
+<p>例子:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> * <span class="keyword">as</span> ns <span class="keyword">from</span> <span class="string">'mod'</span>;</span><br><span class="line"><span class="keyword">export</span> v <span class="keyword">from</span> <span class="string">'mod'</span>;</span><br></pre></td></tr></table></figure></p>
+<h1 id="transform-decorators-legacy"><a href="#transform-decorators-legacy" class="headerlink" title="transform-decorators-legacy"></a>transform-decorators-legacy</h1><blockquote>
+<p>解析修饰器（Decorator）</p>
+</blockquote>
+<p>安装:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i babel-plugin-transform-decorators-legacy -D</span><br></pre></td></tr></table></figure></p>
+<p>配置:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"plugins": ["transform-decorators-legacy"]</span><br></pre></td></tr></table></figure></p>
+<h1 id="transform-class-properties"><a href="#transform-class-properties" class="headerlink" title="transform-class-properties"></a>transform-class-properties</h1><blockquote>
+<p>class 静态属性&amp;&amp;初始属性</p>
+</blockquote>
+<p>安装:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i babel-plugin-transform-class-properties -D</span><br></pre></td></tr></table></figure></p>
+<p>配置:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"plugins": ["transform-class-properties"]</span><br></pre></td></tr></table></figure></p>
+<p>例子:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bork</span> </span>&#123;</span><br><span class="line">    <span class="comment">//Property initializer syntax</span></span><br><span class="line">    instanceProperty = <span class="string">"bork"</span>;</span><br><span class="line">    boundFunction = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.instanceProperty;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//Static class properties</span></span><br><span class="line">    <span class="keyword">static</span> staticProperty = <span class="string">"babelIsCool"</span>;</span><br><span class="line">    <span class="keyword">static</span> staticFunction = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> Bork.staticProperty;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> myBork = <span class="keyword">new</span> Bork;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//Property initializers are not on the prototype.</span></span><br><span class="line">  <span class="built_in">console</span>.log(myBork.prototype.boundFunction); <span class="comment">// &gt; undefined</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">//Bound functions are bound to the class instance.</span></span><br><span class="line">  <span class="built_in">console</span>.log(myBork.boundFunction.call(<span class="literal">undefined</span>)); <span class="comment">// &gt; "bork"</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">//Static function exists on the class.</span></span><br><span class="line">  <span class="built_in">console</span>.log(Bork.staticFunction()); <span class="comment">// &gt; "babelIsCool"</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -328,13 +356,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/iosBug1/">ios 冒泡 bug</a></p>
+        <p><span>本文标题:</span><a href="/2018/常用babel-plugin/">常用babel-plugin</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">余方杨</a></p>
-        <p><span>发布时间:</span>2016-12-24, 16:31:35</p>
+        <p><span>发布时间:</span>2018-05-03, 17:36:00</p>
         <p><span>最后更新:</span>2018-10-02, 20:28:03</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/iosBug1/" title="ios 冒泡 bug">http://yfyld.online/iosBug1/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yfyld.online/iosBug1/　　作者: 余方杨" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/常用babel-plugin/" title="常用babel-plugin">http://yfyld.online/2018/常用babel-plugin/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yfyld.online/2018/常用babel-plugin/　　作者: 余方杨" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -346,16 +374,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/glob/">
-                    glob
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/one/">
-                    markdown 语法1
+                <a href="/2017/css网格单元布局/">
+                    css网格单元布局
                 </a>
             </div>
         
@@ -367,7 +389,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题"><span class="toc-number">1.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原因"><span class="toc-number">2.</span> <span class="toc-text">原因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决方案"><span class="toc-number">3.</span> <span class="toc-text">解决方案</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#transform-function-bind"><span class="toc-number">1.</span> <span class="toc-text">transform-function-bind</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#transform-do-expressions"><span class="toc-number">2.</span> <span class="toc-text">transform-do-expressions</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#transform-es2015-modules-commonjs"><span class="toc-number">3.</span> <span class="toc-text">transform-es2015-modules-commonjs</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#transform-async-to-generator"><span class="toc-number">4.</span> <span class="toc-text">transform-async-to-generator</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#transform-export-extensions"><span class="toc-number">5.</span> <span class="toc-text">transform-export-extensions</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#transform-decorators-legacy"><span class="toc-number">6.</span> <span class="toc-text">transform-decorators-legacy</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#transform-class-properties"><span class="toc-number">7.</span> <span class="toc-text">transform-class-properties</span></a></li></ol>
         
     </div>
     <style>
@@ -403,7 +425,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"ios 冒泡 bug　| yufangyang blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"常用babel-plugin　| yufangyang blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -419,7 +441,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="iosBug1/" data-title="ios 冒泡 bug" data-url="http://yfyld.online/iosBug1/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2018/常用babel-plugin/" data-title="常用babel-plugin" data-url="http://yfyld.online/2018/常用babel-plugin/"></div>
     <script>
         var duoshuoQuery = {short_name:"yuhonyon"};
         var loadComment = function(){
@@ -442,15 +464,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/glob/" title="上一篇: glob">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/one/" title="下一篇: markdown 语法1">
+            <a href="/2017/css网格单元布局/" title="下一篇: css网格单元布局">
                 <i class="fa fa-angle-right"></i>
             </a>
         

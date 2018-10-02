@@ -22,9 +22,10 @@
 <meta property="og:url" content="http://yfyld.online/canvasAPI/index.html">
 <meta property="og:site_name" content="yufangyang blog">
 <meta property="og:description" content="兼容HTML123456789//这是一个普通table。&amp;lt;table&amp;gt;    &amp;lt;tr&amp;gt;        &amp;lt;td&amp;gt;Foo&amp;lt;/td&amp;gt;    &amp;lt;/tr&amp;gt;&amp;lt;/table&amp;gt;//这是另一个普通table。 请注意，在 HTML 区块标签间的 Markdown 格式语法将不会被处理。比如，你在 HTML 区块内使用 Markdown 样式的">
+<meta property="og:locale" content="default">
 <meta property="og:image" content="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png">
 <meta property="og:image" content="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png">
-<meta property="og:updated_time" content="2017-11-15T07:24:11.584Z">
+<meta property="og:updated_time" content="2018-10-02T12:28:03.423Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="markdown 语法">
 <meta name="twitter:description" content="兼容HTML123456789//这是一个普通table。&amp;lt;table&amp;gt;    &amp;lt;tr&amp;gt;        &amp;lt;td&amp;gt;Foo&amp;lt;/td&amp;gt;    &amp;lt;/tr&amp;gt;&amp;lt;/table&amp;gt;//这是另一个普通table。 请注意，在 HTML 区块标签间的 Markdown 格式语法将不会被处理。比如，你在 HTML 区块内使用 Markdown 样式的">
@@ -279,7 +280,7 @@
   
     <div class="article-meta">
       <a href="/canvasAPI/" class="article-date">
-      <time datetime="2016-12-24T16:31:35.000Z" itemprop="datePublished">2016-12-24</time>
+      <time datetime="2016-12-24T08:31:35.000Z" itemprop="datePublished">2016-12-24</time>
 </a>
 
 
@@ -341,13 +342,13 @@
 <h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">* * *</span><br><span class="line"></span><br><span class="line">***</span><br><span class="line"></span><br><span class="line">*****</span><br><span class="line"></span><br><span class="line">- - -</span><br><span class="line"></span><br><span class="line">---------------------------------------</span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>Markdown中有两种方式，实现链接，分别为内联方式和引用方式。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">内联方式：This is an [example link](http://example.com/).</span><br><span class="line">引用方式：</span><br><span class="line">I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].  </span><br><span class="line"></span><br><span class="line">[1]: http://google.com/        "Google" </span><br><span class="line">[2]: http://search.yahoo.com/  "Yahoo Search" </span><br><span class="line">[3]: http://search.msn.com/    "MSN Search"</span><br></pre></td></tr></table></figure></p>
-<p>内联方式：This is an <a href="http://example.com/" target="_blank" rel="external">example link</a>.<br>引用方式：<br>I get 10 times more traffic from <a href="http://google.com/" title="Google" target="_blank" rel="external">Google</a> than from <a href="http://search.yahoo.com/" title="Yahoo Search" target="_blank" rel="external">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search" target="_blank" rel="external">MSN</a>.  </p>
+<p>内联方式：This is an <a href="http://example.com/" target="_blank" rel="noopener">example link</a>.<br>引用方式：<br>I get 10 times more traffic from <a href="http://google.com/" title="Google" target="_blank" rel="noopener">Google</a> than from <a href="http://search.yahoo.com/" title="Yahoo Search" target="_blank" rel="noopener">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search" target="_blank" rel="noopener">MSN</a>.  </p>
 <h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">http:</span>//<span class="attr">example.com</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-<p><a href="http://example.com/" target="_blank" rel="external">http://example.com/</a></p>
+<p><a href="http://example.com/" target="_blank" rel="noopener">http://example.com/</a></p>
 <h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>图片的处理方式和链接的处理方式，非常的类似。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">内联方式：![alt text](https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png "Title")</span><br><span class="line">引用方式：</span><br><span class="line">![alt text][id] </span><br><span class="line"></span><br><span class="line">[id]: https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png "Title"</span><br></pre></td></tr></table></figure>
 <p>内联方式：<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" alt="alt text" title="Title"><br>引用方式：<br><img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" alt="alt text" title="Title"> </p>
-<h2 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h2><p>Markdown 使用星号（<em>）和底线（_）作为标记强调字词的符号，被 </em> 或 <em> 包围的字词会被转成用 <em> 标签包围，用两个 * 或 </em> 包起来的话，则会被转成 <strong>，例如：</strong></em></p>
+<h2 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h2><p>Markdown 使用星号（<em>）和底线（_）作为标记强调字词的符号，被 </em> 或 _ 包围的字词会被转成用 <em> 标签包围，用两个 * 或 _ 包起来的话，则会被转成 <strong>，例如：</strong></em></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">*single asterisks*</span><br><span class="line"></span><br><span class="line">_single underscores_</span><br><span class="line"></span><br><span class="line">**double asterisks**</span><br><span class="line"></span><br><span class="line">__double underscores__</span><br></pre></td></tr></table></figure>
 <p>你可以随便用你喜欢的样式，唯一的限制是，你用什么符号开启标签，就要用什么符号结束。<br>但是如果你的 * 和 _ 两边都有空白的话，它们就只会被当成普通的符号。<br>如果要在文字前后直接插入普通的星号或底线，你可以用反斜线</p>
 
@@ -361,7 +362,7 @@
         <p><span>本文标题:</span><a href="/canvasAPI/">markdown 语法</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">余方杨</a></p>
         <p><span>发布时间:</span>2016-12-24, 16:31:35</p>
-        <p><span>最后更新:</span>2017-11-15, 07:24:11</p>
+        <p><span>最后更新:</span>2018-10-02, 20:28:03</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/canvasAPI/" title="markdown 语法">http://yfyld.online/canvasAPI/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yfyld.online/canvasAPI/　　作者: 余方杨" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -377,14 +378,14 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/glob/">
-                    glob
+                <a href="/one/">
+                    markdown 语法1
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/one/">
+                <a href="/markdown/">
                     markdown 语法
                 </a>
             </div>
@@ -472,7 +473,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/glob/" title="上一篇: glob">
+            <a href="/one/" title="上一篇: markdown 语法1">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -480,13 +481,13 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/one/" title="下一篇: markdown 语法">
+            <a href="/markdown/" title="下一篇: markdown 语法">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/服务器管理/">服务器管理</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/数据绑定Proxy VS Object.definProperty/">数据绑定Proxy VS Object.definProperty</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/glob/">glob</a></li><li class="post-list-item"><a class="post-list-link" href="/canvasAPI/">markdown 语法</a></li><li class="post-list-item"><a class="post-list-link" href="/one/">markdown 语法</a></li><li class="post-list-item"><a class="post-list-link" href="/iosBug1/">ios 冒泡 bug</a></li><li class="post-list-item"><a class="post-list-link" href="/markdown/">markdown 语法</a></li><li class="post-list-item"><a class="post-list-link" href="/canvasDemo/">markdown 语法</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/常用babel-plugin/">常用babel-plugin</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/css网格单元布局/">css网格单元布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/AppCache笔记/">AppCache笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/浏览器缓存机制/">浏览器缓存机制</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/基于vue-cli配置脚手架/">基于vue-cli配置脚手架</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/async-await笔记/">async-await笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/服务器管理/">服务器管理</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/数据绑定Proxy VS Object.definProperty/">数据绑定Proxy VS Object.definProperty</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/glob/">glob</a></li><li class="post-list-item"><a class="post-list-link" href="/iosBug1/">ios 冒泡 bug</a></li><li class="post-list-item"><a class="post-list-link" href="/one/">markdown 语法1</a></li><li class="post-list-item"><a class="post-list-link" href="/canvasAPI/">markdown 语法</a></li><li class="post-list-item"><a class="post-list-link" href="/markdown/">markdown 语法</a></li><li class="post-list-item"><a class="post-list-link" href="/canvasDemo/">markdown 语法</a></li></ul>
 
 
 
@@ -500,7 +501,7 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i>
-                2016-2017 余方杨
+                2016-2018 余方杨
             </div>
             <div class="footer-right">
                 <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>

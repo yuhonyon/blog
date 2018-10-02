@@ -22,6 +22,7 @@
 <meta property="og:title" content="yufangyang blog">
 <meta property="og:url" content="http://yfyld.online/index.html">
 <meta property="og:site_name" content="yufangyang blog">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="yufangyang blog">
 
@@ -272,11 +273,391 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-2018/常用babel-plugin" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/常用babel-plugin/" class="article-date">
+      <time datetime="2018-05-03T09:36:00.000Z" itemprop="datePublished">2018-05-03</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/常用babel-plugin/">常用babel-plugin</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><strong><em> 注意:presets是倒叙 plugins是正序 </em></strong></p>
+<h1 id="transform-function-bind"><a href="#transform-function-bind" class="headerlink" title="transform-function-bind"></a>transform-function-bind</h1><blockquote>
+<p>函数绑定’::’</p>
+</blockquote>
+<p>安装:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i babel-plugin-transform-function-bind -D</span><br></pre></td></tr></table></figure></p>
+<p>配置:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"plugins": ["transform-function-bind"]</span><br></pre></td></tr></table></figure></p>
+<p>例子:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">obj::func</span><br><span class="line"><span class="comment">// 相当于：</span></span><br><span class="line">func.bind(obj)</span><br><span class="line"></span><br><span class="line">::obj.func</span><br><span class="line"><span class="comment">// 相当于：</span></span><br><span class="line">obj.func.bind(obj)</span><br><span class="line"></span><br><span class="line">obj::func(val)</span><br><span class="line"><span class="comment">// 相当于：</span></span><br><span class="line">func.call(obj, val)</span><br><span class="line"></span><br><span class="line">::obj.func(val)</span><br><span class="line"><span class="comment">// 相当于：</span></span><br><span class="line">obj.func.call(obj, val)</span><br></pre></td></tr></table></figure></p>
+<h1 id="transform-do-expressions"><a href="#transform-do-expressions" class="headerlink" title="transform-do-expressions"></a>transform-do-expressions</h1><blockquote>
+<p>解析do{}表达式,主要应用jsx</p>
+</blockquote>
+<p>安装:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i babel-plugin-transform-do-expressions -D</span><br></pre></td></tr></table></figure></p>
+<p>配置:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"plugins": ["transform-do-expressions"]</span><br></pre></td></tr></table></figure></p>
+<p>例子:<br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Component = <span class="function"><span class="params">props</span> =&gt;</span></span><br><span class="line">  &lt;div className=<span class="string">'myComponent'</span>&gt;</span><br><span class="line">    &#123;<span class="keyword">do</span> &#123;</span><br><span class="line">      <span class="keyword">if</span>(color === <span class="string">'blue'</span>) &#123; &lt;BlueComponent/&gt;; &#125;</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">if</span>(color === <span class="string">'red'</span>) &#123; &lt;RedComponent/&gt;; &#125;</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">if</span>(color === <span class="string">'green'</span>) &#123; &lt;GreenComponent/&gt;; &#125;</span><br><span class="line">    &#125;&#125;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="transform-es2015-modules-commonjs"><a href="#transform-es2015-modules-commonjs" class="headerlink" title="transform-es2015-modules-commonjs"></a>transform-es2015-modules-commonjs</h1><blockquote>
+<p>转es6 modules 为commonjs模式</p>
+</blockquote>
+<p>安装:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i babel-plugin-transform-es2015-modules-commonjs -D</span><br></pre></td></tr></table></figure></p>
+<p>配置:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"plugins": ["transform-es2015-modules-commonjs"]</span><br></pre></td></tr></table></figure></p>
+<h1 id="transform-async-to-generator"><a href="#transform-async-to-generator" class="headerlink" title="transform-async-to-generator"></a>transform-async-to-generator</h1><blockquote>
+<p>解析async</p>
+</blockquote>
+<p>安装:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i babel-plugin-transform-async-to-generator -D</span><br></pre></td></tr></table></figure></p>
+<p>配置:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"plugins": ["transform-async-to-generator"]</span><br></pre></td></tr></table></figure></p>
+<h1 id="transform-export-extensions"><a href="#transform-export-extensions" class="headerlink" title="transform-export-extensions"></a>transform-export-extensions</h1><blockquote>
+<p>解析export-from</p>
+</blockquote>
+<p>安装:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i babel-plugin-transform-export-extensions -D</span><br></pre></td></tr></table></figure></p>
+<p>配置:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"plugins": ["transform-export-extensions"]</span><br></pre></td></tr></table></figure></p>
+<p>例子:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> * <span class="keyword">as</span> ns <span class="keyword">from</span> <span class="string">'mod'</span>;</span><br><span class="line"><span class="keyword">export</span> v <span class="keyword">from</span> <span class="string">'mod'</span>;</span><br></pre></td></tr></table></figure></p>
+<h1 id="transform-decorators-legacy"><a href="#transform-decorators-legacy" class="headerlink" title="transform-decorators-legacy"></a>transform-decorators-legacy</h1><blockquote>
+<p>解析修饰器（Decorator）</p>
+</blockquote>
+<p>安装:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i babel-plugin-transform-decorators-legacy -D</span><br></pre></td></tr></table></figure></p>
+<p>配置:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"plugins": ["transform-decorators-legacy"]</span><br></pre></td></tr></table></figure></p>
+<h1 id="transform-class-properties"><a href="#transform-class-properties" class="headerlink" title="transform-class-properties"></a>transform-class-properties</h1><blockquote>
+<p>class 静态属性&amp;&amp;初始属性</p>
+</blockquote>
+<p>安装:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i babel-plugin-transform-class-properties -D</span><br></pre></td></tr></table></figure></p>
+<p>配置:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"plugins": ["transform-class-properties"]</span><br></pre></td></tr></table></figure></p>
+<p>例子:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bork</span> </span>&#123;</span><br><span class="line">    <span class="comment">//Property initializer syntax</span></span><br><span class="line">    instanceProperty = <span class="string">"bork"</span>;</span><br><span class="line">    boundFunction = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.instanceProperty;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//Static class properties</span></span><br><span class="line">    <span class="keyword">static</span> staticProperty = <span class="string">"babelIsCool"</span>;</span><br><span class="line">    <span class="keyword">static</span> staticFunction = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> Bork.staticProperty;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> myBork = <span class="keyword">new</span> Bork;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//Property initializers are not on the prototype.</span></span><br><span class="line">  <span class="built_in">console</span>.log(myBork.prototype.boundFunction); <span class="comment">// &gt; undefined</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">//Bound functions are bound to the class instance.</span></span><br><span class="line">  <span class="built_in">console</span>.log(myBork.boundFunction.call(<span class="literal">undefined</span>)); <span class="comment">// &gt; "bork"</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">//Static function exists on the class.</span></span><br><span class="line">  <span class="built_in">console</span>.log(Bork.staticFunction()); <span class="comment">// &gt; "babelIsCool"</span></span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-2017/css网格单元布局" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/css网格单元布局/" class="article-date">
+      <time datetime="2017-12-25T07:24:00.000Z" itemprop="datePublished">2017-12-25</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/css网格单元布局/">css网格单元布局</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="https-gridbyexample-com-examples"><a href="#https-gridbyexample-com-examples" class="headerlink" title="https://gridbyexample.com/examples/"></a><a href="https://gridbyexample.com/examples/" target="_blank" rel="noopener">https://gridbyexample.com/examples/</a></h1>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-2017/AppCache笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/AppCache笔记/" class="article-date">
+      <time datetime="2017-12-20T03:07:00.000Z" itemprop="datePublished">2017-12-20</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/AppCache笔记/">AppCache笔记</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-2017/浏览器缓存机制" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/浏览器缓存机制/" class="article-date">
+      <time datetime="2017-12-14T07:42:00.000Z" itemprop="datePublished">2017-12-14</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/浏览器缓存机制/">浏览器缓存机制</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-2017/基于vue-cli配置脚手架" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/基于vue-cli配置脚手架/" class="article-date">
+      <time datetime="2017-11-24T02:51:00.000Z" itemprop="datePublished">2017-11-24</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/基于vue-cli配置脚手架/">基于vue-cli配置脚手架</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-2017/async-await笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/async-await笔记/" class="article-date">
+      <time datetime="2017-11-23T08:04:00.000Z" itemprop="datePublished">2017-11-23</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/async-await笔记/">async-await笔记</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <blockquote>
+<p><code>async-await</code>:<code>promise</code>和<code>generator</code>的语法糖</p>
+</blockquote>
+<h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><p>使用try catch 之后我们就能够拿到 Promise.reject 回来的数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">errorDemo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="keyword">let</span> result = <span class="keyword">await</span> outErrorFn();</span><br><span class="line">      <span class="built_in">console</span>.log(result);</span><br><span class="line">  &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(err);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="并行处理"><a href="#并行处理" class="headerlink" title="并行处理"></a>并行处理</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//错误,并发的请求变成了阻塞式同步的操作了</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">bugDemo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">await</span> fetchApi();</span><br><span class="line">    <span class="keyword">await</span> fetchApi();</span><br><span class="line">    <span class="keyword">await</span> fetchApi();</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'清除loading'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">goodDemo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> p1= fetchApi();</span><br><span class="line">    <span class="keyword">let</span> p2= fetchApi();</span><br><span class="line">    <span class="keyword">let</span> p3= fetchApi();</span><br><span class="line">    <span class="keyword">await</span> <span class="built_in">Promise</span>.all([p1, p2, p3]);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'清除loading'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="for-循环"><a href="#for-循环" class="headerlink" title="for 循环"></a>for 循环</h2><p>await必须在async函数的上下文中的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">forEachDemo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">    arr.forEach(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">await</span> item;<span class="comment">//报错,await不在async的上下文中</span></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">forDemo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i ++) &#123;</span><br><span class="line">        <span class="keyword">await</span> arr[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-2017/服务器管理" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2017/服务器管理/" class="article-date">
-      <time datetime="2017-11-08T14:07:00.000Z" itemprop="datePublished">2017-11-08</time>
+      <time datetime="2017-11-08T06:07:00.000Z" itemprop="datePublished">2017-11-08</time>
 </a>
 
 
@@ -306,7 +687,7 @@
 <h2 id="自动重启"><a href="#自动重启" class="headerlink" title="自动重启"></a>自动重启</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br><span class="line">0 3 * * * sh /fs/restart.sh</span><br></pre></td></tr></table></figure>
 <h1 id="finalSpeed"><a href="#finalSpeed" class="headerlink" title="finalSpeed"></a>finalSpeed</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/finalspeed/master/install_fs.sh &amp;&amp; bash install_fs.sh</span><br></pre></td></tr></table></figure>
 <h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><ul>
-<li>卸载：wget -N –no-check-certificate <a href="https://raw.githubusercontent.com/91yun/finalspeed/master/install_fs.sh" target="_blank" rel="external">https://raw.githubusercontent.com/91yun/finalspeed/master/install_fs.sh</a> &amp;&amp; bash install_fs.sh uninstall</li>
+<li>卸载：wget -N –no-check-certificate <a href="https://raw.githubusercontent.com/91yun/finalspeed/master/install_fs.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/91yun/finalspeed/master/install_fs.sh</a> &amp;&amp; bash install_fs.sh uninstall</li>
 <li>操作：/etc/init.d/finalspeed {start|stop|status}</li>
 </ul>
 <h1 id="安装tcptun"><a href="#安装tcptun" class="headerlink" title="安装tcptun"></a>安装tcptun</h1><h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O ./kcptun_for_ss_ssr-install.sh https://raw.githubusercontent.com/onekeyshell/kcptun_for_ss_ssr/master/kcptun_for_ss_ssr-install.sh</span><br><span class="line">    chmod 700 ./kcptun_for_ss_ssr-install.sh</span><br><span class="line">    ./kcptun_for_ss_ssr-install.sh install</span><br></pre></td></tr></table></figure>
@@ -343,7 +724,7 @@
   
     <div class="article-meta">
       <a href="/2017/数据绑定Proxy VS Object.definProperty/" class="article-date">
-      <time datetime="2017-10-16T11:32:00.000Z" itemprop="datePublished">2017-10-16</time>
+      <time datetime="2017-10-16T03:32:00.000Z" itemprop="datePublished">2017-10-16</time>
 </a>
 
 
@@ -370,7 +751,7 @@
           
         <h2 id="Object-defineProperty"><a href="#Object-defineProperty" class="headerlink" title="Object.defineProperty"></a>Object.defineProperty</h2><p><code>Object.defineProperty(obj, prop, descriptor)</code></p>
 <blockquote>
-<p>Object.defineProperty() 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank" rel="external">详情</a></p>
+<p>Object.defineProperty() 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank" rel="noopener">详情</a></p>
 </blockquote>
 <h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p><strong>obj</strong><br>需要被操作的目标对象</p>
 <p><strong>prop</strong><br>目标对象需要定义或修改的属性的名称。</p>
@@ -380,7 +761,7 @@
 <p>使用set()方法去监测属性变化，但是对于一个数组使用value()方法来代替</p>
 <h2 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h2><p><code>var proxy = new Proxy(target, handler);</code></p>
 <blockquote>
-<p>Proxy 用于修改某些操作的默认行为，等同于在语言层面做出修改，所以属于一种“元编程”（meta programming），即对编程语言进行编程。<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy" target="_blank" rel="external">详情</a></p>
+<p>Proxy 用于修改某些操作的默认行为，等同于在语言层面做出修改，所以属于一种“元编程”（meta programming），即对编程语言进行编程。<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy" target="_blank" rel="noopener">详情</a></p>
 </blockquote>
 <h3 id="参数-1"><a href="#参数-1" class="headerlink" title="参数"></a>参数</h3><p><strong>target</strong><br>一个目标对象(可以是任何类型的对象，包括本机数组，函数，甚至另一个代理)用Proxy来包装。</p>
 <p><strong>handler</strong><br>一个对象，其属性是当执行一个操作时定义代理的行为的函数</p>
@@ -417,7 +798,7 @@
   
     <div class="article-meta">
       <a href="/2017/glob/" class="article-date">
-      <time datetime="2017-08-30T18:17:00.000Z" itemprop="datePublished">2017-08-30</time>
+      <time datetime="2017-08-30T10:17:00.000Z" itemprop="datePublished">2017-08-30</time>
 </a>
 
 
@@ -472,141 +853,11 @@
 
 
   
-    <article id="post-canvasAPI" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/canvasAPI/" class="article-date">
-      <time datetime="2016-12-24T16:31:35.000Z" itemprop="datePublished">2016-12-24</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/canvasAPI/">markdown 语法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="兼容HTML"><a href="#兼容HTML" class="headerlink" title="兼容HTML"></a>兼容HTML</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//这是一个普通table。</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>Foo<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"></span><br><span class="line">//这是另一个普通table。</span><br></pre></td></tr></table></figure>
-<p>请注意，在 HTML 区块标签间的 Markdown 格式语法将不会被处理。比如，你在 HTML 区块内使用 Markdown 样式的<em>强调</em>会没有效果。</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/canvasAPI/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-one" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/one/" class="article-date">
-      <time datetime="2016-12-24T16:31:35.000Z" itemprop="datePublished">2016-12-24</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/one/">markdown 语法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="兼容HTML"><a href="#兼容HTML" class="headerlink" title="兼容HTML"></a>兼容HTML</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//这是一个普通table。</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>Foo<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"></span><br><span class="line">//这是另一个普通table。</span><br></pre></td></tr></table></figure>
-<p>请注意，在 HTML 区块标签间的 Markdown 格式语法将不会被处理。比如，你在 HTML 区块内使用 Markdown 样式的<em>强调</em>会没有效果。</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/one/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
     <article id="post-iosBug1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/iosBug1/" class="article-date">
-      <time datetime="2016-12-24T16:31:35.000Z" itemprop="datePublished">2016-12-24</time>
+      <time datetime="2016-12-24T08:31:35.000Z" itemprop="datePublished">2016-12-24</time>
 </a>
 
 
@@ -667,158 +918,10 @@
 
 
   
-    <article id="post-markdown" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/markdown/" class="article-date">
-      <time datetime="2016-12-14T16:31:35.000Z" itemprop="datePublished">2016-12-14</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/markdown/">markdown 语法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="Cmd-Markdown-简明语法手册"><a href="#Cmd-Markdown-简明语法手册" class="headerlink" title="Cmd Markdown 简明语法手册"></a>Cmd Markdown 简明语法手册</h1><p>标签： Cmd-Markdown</p>
-<hr>
-<h3 id="1-斜体和粗体"><a href="#1-斜体和粗体" class="headerlink" title="1. 斜体和粗体"></a>1. 斜体和粗体</h3><p>使用 <em> 和 *</em> 表示斜体和粗体。</p>
-<p>示例：</p>
-<p>这是 <em>斜体</em>，这是 <strong>粗体</strong>。</p>
-<h3 id="2-分级标题"><a href="#2-分级标题" class="headerlink" title="2. 分级标题"></a>2. 分级标题</h3><p>使用 === 表示一级标题，使用 — 表示二级标题。</p>
-<p>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">这是一个一级标题</span><br><span class="line">============================</span><br><span class="line"></span><br><span class="line">这是一个二级标题</span><br><span class="line">--------------------------------------------------</span><br><span class="line"></span><br><span class="line">### 这是一个三级标题</span><br></pre></td></tr></table></figure>
-<p>你也可以选择在行首加井号表示不同级别的标题 (H1-H6)，例如：# H1, ## H2, ### H3，#### H4。</p>
-<h3 id="3-外链接"><a href="#3-外链接" class="headerlink" title="3. 外链接"></a>3. 外链接</h3><p>使用 [描述](链接地址) 为文字增加外链接。</p>
-<p>示例：</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/markdown/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-canvasDemo" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/canvasDemo/" class="article-date">
-      <time datetime="2016-12-14T16:31:35.000Z" itemprop="datePublished">2016-12-14</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/canvasDemo/">markdown 语法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id=""><a href="#" class="headerlink" title=""></a><canvas></canvas></h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"canvas"</span> <span class="attr">width</span>=<span class="string">"100"</span> <span class="attr">height</span>=<span class="string">"100"</span>&gt;</span>该浏览器不支持canvas<span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>没有设置<code>width</code>,<code>height</code>canvas会初始化宽度为300像素和高度为150像素。</li>
-<li>使用CSS设置宽高,canvas会伸缩(类似<code>&lt;img&gt;</code>)</li>
-<li><code>&lt;canvas&gt;</code>标签中提供了替换内容。支持<code>&lt;canvas&gt;</code>的浏览器将会忽略在容器中包含的内容，并且只是正常渲染<code>canvas</code>。</li>
-</ul>
-<h1 id="Context"><a href="#Context" class="headerlink" title="Context"></a>Context</h1><p>2d渲染上下文方式<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">'canvas'</span>);</span><br><span class="line"><span class="keyword">var</span> ctx = canvas.getContext(<span class="string">'2d'</span>);</span><br></pre></td></tr></table></figure></p>
-<h1 id="绘制API"><a href="#绘制API" class="headerlink" title="绘制API"></a>绘制API</h1><h2 id="矩形"><a href="#矩形" class="headerlink" title="矩形"></a>矩形</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CanvasRenderingContext2D.fillRect(x, y, width, height)</span><br><span class="line"><span class="comment">//绘制一个填充的矩形</span></span><br><span class="line">CanvasRenderingContext2D.strokeRect(x, y, width, height)</span><br><span class="line"><span class="comment">//绘制一个矩形的边框</span></span><br><span class="line">CanvasRenderingContext2D.clearRect(x, y, width, height)</span><br><span class="line"><span class="comment">//清除指定矩形区域，让清除部分完全透明。</span></span><br></pre></td></tr></table></figure>
-<h2 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">CanvasRenderingContext2D.beginPath()</span><br><span class="line">//新建一条路径，生成之后，图形绘制命令被指向到路径上生成路径。</span><br><span class="line">CanvasRenderingContext2D.closePath()</span><br><span class="line">//闭合路径之后图形绘制命令又重新指向到上下文中。</span><br><span class="line">CanvasRenderingContext2D.moveTo()</span><br><span class="line">//将一个新的子路径的起始点移动到(x，y)坐标。</span><br><span class="line">CanvasRenderingContext2D.lineTo()</span><br><span class="line">//使用直线连接子路径的最后的点到x,y坐标。</span><br><span class="line">CanvasRenderingContext2D.bezierCurveTo()</span><br><span class="line">//添加一个3次贝赛尔曲线路径。该方法需要三个点。 第一、第二个点是控制点，第三个点是结束点。起始点是当前路径的最后一个点，绘制贝赛尔曲线前，可以通过调用 moveTo() 进行修改。</span><br><span class="line">CanvasRenderingContext2D.quadraticCurveTo()</span><br><span class="line">//添加一个2次贝赛尔曲线路径。</span><br><span class="line">CanvasRenderingContext2D.arc()</span><br><span class="line">//绘制一段圆弧路径， 圆弧路径的圆心在 (x, y) 位置，半径为 r ，根据anticlockwise （默认为顺时针）指定的方向从 startAngle 开始绘制，到 endAngle 结束。</span><br><span class="line">CanvasRenderingContext2D.arcTo()</span><br><span class="line">//根据控制点和半径绘制圆弧路径，使用直线连接前一个点。</span><br><span class="line">CanvasRenderingContext2D.ellipse() </span><br><span class="line">//添加一个椭圆路径，椭圆的圆心在（x,y）位置，半径分别是radiusX 和 radiusY ，按照anticlockwise （默认顺时针）指定的方向，从 startAngle  开始绘制，到 endAngle 结束。</span><br><span class="line">CanvasRenderingContext2D.rect()</span><br><span class="line">//创建一个矩形路径，矩形的起点位置是 (x, y) ，尺寸为 width 和 height。</span><br><span class="line">CanvasRenderingContext2D.stroke()</span><br><span class="line">//通过线条来绘制图形轮廓。</span><br><span class="line">CanvasRenderingContext2D.fill()</span><br><span class="line">//通过填充路径的内容区域生成实心的图形。</span><br></pre></td></tr></table></figure>
-<h2 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CanvasRenderingContext2D.fillText()</span><br><span class="line">//在(x,y)位置绘制（填充）文本。</span><br><span class="line">CanvasRenderingContext2D.strokeText()</span><br><span class="line">//在(x,y)位置绘制（描边）文本。</span><br><span class="line">CanvasRenderingContext2D.measureText()</span><br><span class="line">//返回 TextMetrics 对象。</span><br></pre></td></tr></table></figure>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CanvasRenderingContext2D.drawImage()</span><br><span class="line">//绘制指定的图片。该方法有多种格式，提供了很大的使用灵活性。</span><br></pre></td></tr></table></figure>
-<h1 id="样式API"><a href="#样式API" class="headerlink" title="样式API"></a>样式API</h1><h2 id="线样式"><a href="#线样式" class="headerlink" title="线样式"></a>线样式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">CanvasRenderingContext2D.lineWidth</span><br><span class="line">线的宽度。默认 1.0</span><br><span class="line">CanvasRenderingContext2D.lineCap</span><br><span class="line">线末端的类型。 允许的值： butt (默认), round, square.</span><br><span class="line">CanvasRenderingContext2D.lineJoin</span><br><span class="line">定义两线相交拐点的类型。允许的值：round, bevel, miter(默认)。</span><br><span class="line">CanvasRenderingContext2D.miterLimit</span><br><span class="line">斜接面限制比例。默认 10。</span><br><span class="line">CanvasRenderingContext2D.getLineDash()</span><br><span class="line">返回当前线段样式的数组，数组包含一组数量为偶数的非负数数字。</span><br><span class="line">CanvasRenderingContext2D.setLineDash()</span><br><span class="line">设置当前的线段样式。</span><br><span class="line">CanvasRenderingContext2D.lineDashOffset</span><br><span class="line">描述在哪里开始绘制线段。</span><br></pre></td></tr></table></figure>
-<h2 id="文本样式"><a href="#文本样式" class="headerlink" title="文本样式"></a>文本样式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">CanvasRenderingContext2D.font</span><br><span class="line">字体设置。 默认值 10px sans-serif。</span><br><span class="line">CanvasRenderingContext2D.textAlign</span><br><span class="line">文本对齐设置。 允许的值： start (默认), end, left, right 或 center.</span><br><span class="line">CanvasRenderingContext2D.textBaseline</span><br><span class="line">基线对齐设置。 允许的值： top, hanging, middle, alphabetic (默认),ideographic, bottom.</span><br><span class="line">CanvasRenderingContext2D.direction</span><br><span class="line">文本的方向。 允许的值： ltr, rtl, inherit (默认).</span><br></pre></td></tr></table></figure>
-<h2 id="填充-描边-渐变-图案"><a href="#填充-描边-渐变-图案" class="headerlink" title="填充,描边,渐变,图案"></a>填充,描边,渐变,图案</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">CanvasRenderingContext2D.fillStyle</span><br><span class="line">//图形内部的颜色和样式。 默认 #000 (黑色).</span><br><span class="line">CanvasRenderingContext2D.strokeStyle</span><br><span class="line">//图形边线的颜色和样式。 默认 #000 (黑色)</span><br><span class="line">CanvasRenderingContext2D.createLinearGradient()</span><br><span class="line">//创建一个沿着参数坐标指定的线的线性渐变。</span><br><span class="line">CanvasRenderingContext2D.createRadialGradient()</span><br><span class="line">//创建一个沿着参数坐标指定的线的放射性性渐变。</span><br><span class="line">CanvasRenderingContext2D.createPattern()</span><br><span class="line">//使用指定的图片 (CanvasImageSource)创建图案。通过 repetition 变量指定的方向上重复源图片。此方法返回 CanvasPattern对象。</span><br></pre></td></tr></table></figure>
-<h2 id="阴影"><a href="#阴影" class="headerlink" title="阴影"></a>阴影</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">CanvasRenderingContext2D.shadowBlur</span><br><span class="line">//描述模糊效果。 默认 0</span><br><span class="line">CanvasRenderingContext2D.shadowColor</span><br><span class="line">//阴影的颜色。 默认fully-transparent black.</span><br><span class="line">CanvasRenderingContext2D.shadowOffsetX</span><br><span class="line">//阴影水平方向的偏移量。 默认 0.</span><br><span class="line">CanvasRenderingContext2D.shadowOffsetY</span><br><span class="line">//阴影垂直方向的偏移量。 默认 0.</span><br></pre></td></tr></table></figure>
-<h1 id="方法API"><a href="#方法API" class="headerlink" title="方法API"></a>方法API</h1><h2 id="canvas状态"><a href="#canvas状态" class="headerlink" title="canvas状态"></a>canvas状态</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CanvasRenderingContext2D.save()</span><br><span class="line">//使用栈保存当前的绘画样式状态，你可以使用 restore() 恢复任何改变。</span><br><span class="line">CanvasRenderingContext2D.restore()</span><br><span class="line">//恢复到最近的绘制样式状态，此状态是通过 save() 保存到”状态栈“中最新的元素。</span><br><span class="line">CanvasRenderingContext2D.canvas</span><br><span class="line">//对 HTMLCanvasElement 只读的反向引用。如果和 &lt;canvas&gt; 元素没有联系，可能为null。</span><br></pre></td></tr></table></figure>
-<h2 id="路径-1"><a href="#路径-1" class="headerlink" title="路径"></a>路径</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">CanvasRenderingContext2D.drawFocusIfNeeded()</span><br><span class="line">如果给定的元素获取了焦点，那么此方法会在当前的路径绘制一个焦点。</span><br><span class="line">CanvasRenderingContext2D.scrollPathIntoView()</span><br><span class="line">将当前或给定的路径滚动到窗口。</span><br><span class="line">CanvasRenderingContext2D.clip()</span><br><span class="line">从当前路径创建一个剪切路径。在  clip() 调用之后，绘制的所有信息只会出现在剪切路径内部。</span><br><span class="line">CanvasRenderingContext2D.isPointInPath()</span><br><span class="line">判断当前路径是否包含检测点。</span><br><span class="line">CanvasRenderingContext2D.isPointInStroke()</span><br><span class="line">判断检测点是否在路径的描边线上。</span><br></pre></td></tr></table></figure>
-<h2 id="变换"><a href="#变换" class="headerlink" title="变换"></a>变换</h2><p>在 CanvasRenderingContext2D 渲染背景中的对象会有一个当前的变换矩阵，一些方法可以对其进行控制。当创建当前的默认路径，绘制文本、图形和Path2D对象的时候，会应用此变换矩阵。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">CanvasRenderingContext2D.currentTransform</span><br><span class="line">//当前的变换矩阵 (SVGMatrix 对象)。</span><br><span class="line">CanvasRenderingContext2D.rotate()</span><br><span class="line">//在变换矩阵中增加旋转，角度变量表示一个顺时针旋转角度并且用弧度表示。</span><br><span class="line">CanvasRenderingContext2D.scale()</span><br><span class="line">//根据 x 水平方向和 y 垂直方向，为canvas 单位添加缩放变换。</span><br><span class="line">CanvasRenderingContext2D.translate()</span><br><span class="line">//通过在网格中移动 canvas 和 canvas 原点 x 水平方向、原点 y 垂直方向，添加平移变换</span><br><span class="line">CanvasRenderingContext2D.transform()</span><br><span class="line">//使用方法参数描述的矩阵多次叠加当前的变换矩阵。</span><br><span class="line">CanvasRenderingContext2D.setTransform()</span><br><span class="line">//重新设置当前的变换为单位矩阵，并使用同样的变量调用 transform() 方法。</span><br><span class="line">CanvasRenderingContext2D.resetTransform() </span><br><span class="line">//使用单位矩阵重新设置当前的变换。</span><br></pre></td></tr></table></figure></p>
-<h2 id="像素控制"><a href="#像素控制" class="headerlink" title="像素控制"></a>像素控制</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CanvasRenderingContext2D.createImageData()</span><br><span class="line">//使用指定的尺寸，创建一个新的、空白的 ImageData 对象。所有的像素在新对象中都是透明的。</span><br><span class="line">CanvasRenderingContext2D.getImageData()</span><br><span class="line">//返回一个 ImageData 对象，用来描述canvas区域隐含的像素数据，这个区域通过矩形表示，起始点为(sx, sy)、宽为sw、高为sh。</span><br><span class="line">CanvasRenderingContext2D.putImageData()</span><br><span class="line">//将数据从已有的 ImageData 绘制到位图上。 如果提供了脏矩形，只能绘制矩形的像素。</span><br></pre></td></tr></table></figure>
-<h2 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CanvasRenderingContext2D.imageSmoothingEnabled </span><br><span class="line">图像平滑的方式；如果禁用，缩放时，图像不会被平滑处理。</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">
@@ -826,7 +929,7 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i>
-                2016-2017 余方杨
+                2016-2018 余方杨
             </div>
             <div class="footer-right">
                 <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>

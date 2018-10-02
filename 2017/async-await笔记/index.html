@@ -15,18 +15,17 @@
 
 
 
-<meta name="description" content="问题123document.on(&apos;click&apos;,&apos;.aaa&apos;,function()&amp;#123;    //如果.aaa不是img a 的时候不触发&amp;#125;); 在ios里点击事件,使用事件代理到 document 或body,不能触发">
-<meta name="keywords" content="ios">
+<meta name="description" content="async-await:promise和generator的语法糖  错误处理使用try catch 之后我们就能够拿到 Promise.reject 回来的数据 12345678async function errorDemo() &amp;#123;  try &amp;#123;      let result = await outErrorFn();      console.log(result);">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ios 冒泡 bug">
-<meta property="og:url" content="http://yfyld.online/iosBug1/index.html">
+<meta property="og:title" content="async-await笔记">
+<meta property="og:url" content="http://yfyld.online/2017/async-await笔记/index.html">
 <meta property="og:site_name" content="yufangyang blog">
-<meta property="og:description" content="问题123document.on(&apos;click&apos;,&apos;.aaa&apos;,function()&amp;#123;    //如果.aaa不是img a 的时候不触发&amp;#125;); 在ios里点击事件,使用事件代理到 document 或body,不能触发">
+<meta property="og:description" content="async-await:promise和generator的语法糖  错误处理使用try catch 之后我们就能够拿到 Promise.reject 回来的数据 12345678async function errorDemo() &amp;#123;  try &amp;#123;      let result = await outErrorFn();      console.log(result);">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2018-10-02T12:28:03.423Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ios 冒泡 bug">
-<meta name="twitter:description" content="问题123document.on(&apos;click&apos;,&apos;.aaa&apos;,function()&amp;#123;    //如果.aaa不是img a 的时候不触发&amp;#125;); 在ios里点击事件,使用事件代理到 document 或body,不能触发">
+<meta name="twitter:title" content="async-await笔记">
+<meta name="twitter:description" content="async-await:promise和generator的语法糖  错误处理使用try catch 之后我们就能够拿到 Promise.reject 回来的数据 12345678async function errorDemo() &amp;#123;  try &amp;#123;      let result = await outErrorFn();      console.log(result);">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +55,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>ios 冒泡 bug | yufangyang blog</title>
+<title>async-await笔记 | yufangyang blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -273,11 +272,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-iosBug1" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-2017/async-await笔记" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/iosBug1/" class="article-date">
-      <time datetime="2016-12-24T08:31:35.000Z" itemprop="datePublished">2016-12-24</time>
+      <a href="/2017/async-await笔记/" class="article-date">
+      <time datetime="2017-11-23T08:04:00.000Z" itemprop="datePublished">2017-11-23</time>
 </a>
 
 
@@ -292,7 +291,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      ios 冒泡 bug
+      async-await笔记
     </h1>
   
 
@@ -302,10 +301,6 @@
         
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
-    </div>
-
         <div class="clearfix"></div>
       </div>
       
@@ -313,13 +308,16 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.on(<span class="string">'click'</span>,<span class="string">'.aaa'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//如果.aaa不是img a 的时候不触发</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>在ios里点击事件,使用事件代理到 <code>document</code> 或<code>body</code>,不能触发<br><a id="more"></a></p>
-<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>ios 系统bug</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ul>
-<li>给​目标元素加一条样式规则 <code>{cursor: pointer}</code>;</li>
-<li>事件代理到body下面的容器</li>
-</ul>
+        <blockquote>
+<p><code>async-await</code>:<code>promise</code>和<code>generator</code>的语法糖</p>
+</blockquote>
+<h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><p>使用try catch 之后我们就能够拿到 Promise.reject 回来的数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">errorDemo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="keyword">let</span> result = <span class="keyword">await</span> outErrorFn();</span><br><span class="line">      <span class="built_in">console</span>.log(result);</span><br><span class="line">  &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(err);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="并行处理"><a href="#并行处理" class="headerlink" title="并行处理"></a>并行处理</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//错误,并发的请求变成了阻塞式同步的操作了</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">bugDemo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">await</span> fetchApi();</span><br><span class="line">    <span class="keyword">await</span> fetchApi();</span><br><span class="line">    <span class="keyword">await</span> fetchApi();</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'清除loading'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">goodDemo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> p1= fetchApi();</span><br><span class="line">    <span class="keyword">let</span> p2= fetchApi();</span><br><span class="line">    <span class="keyword">let</span> p3= fetchApi();</span><br><span class="line">    <span class="keyword">await</span> <span class="built_in">Promise</span>.all([p1, p2, p3]);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'清除loading'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="for-循环"><a href="#for-循环" class="headerlink" title="for 循环"></a>for 循环</h2><p>await必须在async函数的上下文中的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">forEachDemo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">    arr.forEach(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">await</span> item;<span class="comment">//报错,await不在async的上下文中</span></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">forDemo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i ++) &#123;</span><br><span class="line">        <span class="keyword">await</span> arr[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -328,13 +326,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/iosBug1/">ios 冒泡 bug</a></p>
+        <p><span>本文标题:</span><a href="/2017/async-await笔记/">async-await笔记</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">余方杨</a></p>
-        <p><span>发布时间:</span>2016-12-24, 16:31:35</p>
+        <p><span>发布时间:</span>2017-11-23, 16:04:00</p>
         <p><span>最后更新:</span>2018-10-02, 20:28:03</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/iosBug1/" title="ios 冒泡 bug">http://yfyld.online/iosBug1/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yfyld.online/iosBug1/　　作者: 余方杨" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/async-await笔记/" title="async-await笔记">http://yfyld.online/2017/async-await笔记/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yfyld.online/2017/async-await笔记/　　作者: 余方杨" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -347,15 +345,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/glob/">
-                    glob
+                <a href="/2017/基于vue-cli配置脚手架/">
+                    基于vue-cli配置脚手架
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/one/">
-                    markdown 语法1
+                <a href="/2017/服务器管理/">
+                    服务器管理
                 </a>
             </div>
         
@@ -367,7 +365,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题"><span class="toc-number">1.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原因"><span class="toc-number">2.</span> <span class="toc-text">原因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决方案"><span class="toc-number">3.</span> <span class="toc-text">解决方案</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#错误处理"><span class="toc-number">1.</span> <span class="toc-text">错误处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#并行处理"><span class="toc-number">2.</span> <span class="toc-text">并行处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#for-循环"><span class="toc-number">3.</span> <span class="toc-text">for 循环</span></a></li></ol>
         
     </div>
     <style>
@@ -403,7 +401,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"ios 冒泡 bug　| yufangyang blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"async-await笔记　| yufangyang blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -419,7 +417,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="iosBug1/" data-title="ios 冒泡 bug" data-url="http://yfyld.online/iosBug1/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/async-await笔记/" data-title="async-await笔记" data-url="http://yfyld.online/2017/async-await笔记/"></div>
     <script>
         var duoshuoQuery = {short_name:"yuhonyon"};
         var loadComment = function(){
@@ -442,7 +440,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/glob/" title="上一篇: glob">
+            <a href="/2017/基于vue-cli配置脚手架/" title="上一篇: 基于vue-cli配置脚手架">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -450,7 +448,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/one/" title="下一篇: markdown 语法1">
+            <a href="/2017/服务器管理/" title="下一篇: 服务器管理">
                 <i class="fa fa-angle-right"></i>
             </a>
         

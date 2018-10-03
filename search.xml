@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[11]]></title>
-      <url>http://yfyld.online/2018/11/</url>
+      <url>http://blog.yfyld.online/2018/11/</url>
       <content type="html"></content>
       
         
@@ -13,7 +13,7 @@
     
     <entry>
       <title><![CDATA[常用babel-plugin]]></title>
-      <url>http://yfyld.online/2018/%E5%B8%B8%E7%94%A8babel-plugin/</url>
+      <url>http://blog.yfyld.online/2018/%E5%B8%B8%E7%94%A8babel-plugin/</url>
       <content type="html"><![CDATA[<p><strong><em> 注意:presets是倒叙 plugins是正序 </em></strong></p>
 <h1 id="transform-function-bind"><a href="#transform-function-bind" class="headerlink" title="transform-function-bind"></a>transform-function-bind</h1><blockquote>
 <p>函数绑定’::’</p>
@@ -61,7 +61,7 @@
     
     <entry>
       <title><![CDATA[css网格单元布局]]></title>
-      <url>http://yfyld.online/2017/css%E7%BD%91%E6%A0%BC%E5%8D%95%E5%85%83%E5%B8%83%E5%B1%80/</url>
+      <url>http://blog.yfyld.online/2017/css%E7%BD%91%E6%A0%BC%E5%8D%95%E5%85%83%E5%B8%83%E5%B1%80/</url>
       <content type="html"><![CDATA[<h1 id="https-gridbyexample-com-examples"><a href="#https-gridbyexample-com-examples" class="headerlink" title="https://gridbyexample.com/examples/"></a><a href="https://gridbyexample.com/examples/" target="_blank" rel="noopener">https://gridbyexample.com/examples/</a></h1>]]></content>
       
         
@@ -69,7 +69,7 @@
     
     <entry>
       <title><![CDATA[AppCache笔记]]></title>
-      <url>http://yfyld.online/2017/AppCache%E7%AC%94%E8%AE%B0/</url>
+      <url>http://blog.yfyld.online/2017/AppCache%E7%AC%94%E8%AE%B0/</url>
       <content type="html"></content>
       
         
@@ -77,7 +77,7 @@
     
     <entry>
       <title><![CDATA[浏览器缓存机制]]></title>
-      <url>http://yfyld.online/2017/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/</url>
+      <url>http://blog.yfyld.online/2017/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/</url>
       <content type="html"></content>
       
         
@@ -85,7 +85,7 @@
     
     <entry>
       <title><![CDATA[基于vue-cli配置脚手架]]></title>
-      <url>http://yfyld.online/2017/%E5%9F%BA%E4%BA%8Evue-cli%E9%85%8D%E7%BD%AE%E8%84%9A%E6%89%8B%E6%9E%B6/</url>
+      <url>http://blog.yfyld.online/2017/%E5%9F%BA%E4%BA%8Evue-cli%E9%85%8D%E7%BD%AE%E8%84%9A%E6%89%8B%E6%9E%B6/</url>
       <content type="html"></content>
       
         
@@ -93,7 +93,7 @@
     
     <entry>
       <title><![CDATA[async-await笔记]]></title>
-      <url>http://yfyld.online/2017/async-await%E7%AC%94%E8%AE%B0/</url>
+      <url>http://blog.yfyld.online/2017/async-await%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<blockquote>
 <p><code>async-await</code>:<code>promise</code>和<code>generator</code>的语法糖</p>
 </blockquote>
@@ -111,7 +111,7 @@
     
     <entry>
       <title><![CDATA[服务器管理]]></title>
-      <url>http://yfyld.online/2017/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AE%A1%E7%90%86/</url>
+      <url>http://blog.yfyld.online/2017/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AE%A1%E7%90%86/</url>
       <content type="html"><![CDATA[<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="重装系统后链接ssh"><a href="#重装系统后链接ssh" class="headerlink" title="重装系统后链接ssh"></a>重装系统后链接ssh</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -R ip</span><br></pre></td></tr></table></figure>
 <h2 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod +x /etc/rc.local</span><br><span class="line">vi /etc/rc.local</span><br></pre></td></tr></table></figure>
 <h2 id="自动重启"><a href="#自动重启" class="headerlink" title="自动重启"></a>自动重启</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br><span class="line">0 3 * * * sh /fs/restart.sh</span><br></pre></td></tr></table></figure>
@@ -131,7 +131,7 @@
     
     <entry>
       <title><![CDATA[数据绑定Proxy VS Object.definProperty]]></title>
-      <url>http://yfyld.online/2017/%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9AProxy%20VS%20Object.definProperty/</url>
+      <url>http://blog.yfyld.online/2017/%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9AProxy%20VS%20Object.definProperty/</url>
       <content type="html"><![CDATA[<h2 id="Object-defineProperty"><a href="#Object-defineProperty" class="headerlink" title="Object.defineProperty"></a>Object.defineProperty</h2><p><code>Object.defineProperty(obj, prop, descriptor)</code></p>
 <blockquote>
 <p>Object.defineProperty() 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank" rel="noopener">详情</a></p>
@@ -158,7 +158,7 @@
     
     <entry>
       <title><![CDATA[glob]]></title>
-      <url>http://yfyld.online/2017/glob/</url>
+      <url>http://blog.yfyld.online/2017/glob/</url>
       <content type="html"><![CDATA[<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h2 id="是打发斯蒂芬"><a href="#是打发斯蒂芬" class="headerlink" title="是打发斯蒂芬"></a>是打发斯蒂芬</h2>]]></content>
       
         
@@ -171,57 +171,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[markdown 语法1]]></title>
-      <url>http://yfyld.online/one/</url>
-      <content type="html"><![CDATA[<h1 id="兼容HTML"><a href="#兼容HTML" class="headerlink" title="兼容HTML"></a>兼容HTML</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//这是一个普通table。</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>Foo<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"></span><br><span class="line">//这是另一个普通table。</span><br></pre></td></tr></table></figure>
-<p>请注意，在 HTML 区块标签间的 Markdown 格式语法将不会被处理。比如，你在 HTML 区块内使用 Markdown 样式的<em>强调</em>会没有效果。</p>
-<a id="more"></a>
-<h1 id="特殊字符自动转换"><a href="#特殊字符自动转换" class="headerlink" title="特殊字符自动转换"></a>特殊字符自动转换</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span>&lt;<span class="number">5</span></span><br></pre></td></tr></table></figure>
-<p>Markdown 将会把它转换为：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span> &amp;lt; <span class="number">5</span></span><br></pre></td></tr></table></figure>
-<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><h2 id="段落-换行"><a href="#段落-换行" class="headerlink" title="段落/换行"></a>段落/换行</h2><p>在插入处先按入两个以上的空格然后回车</p>
-<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>Markdown 支持两种标题的语法</p>
-<h4 id="用底线的形式，利用-（最高阶标题）和-（第二阶标题），例如："><a href="#用底线的形式，利用-（最高阶标题）和-（第二阶标题），例如：" class="headerlink" title="用底线的形式，利用 = （最高阶标题）和 - （第二阶标题），例如："></a>用底线的形式，利用 = （最高阶标题）和 - （第二阶标题），例如：</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">This is an H1</span><br><span class="line">=============</span><br><span class="line"></span><br><span class="line">This is an H2</span><br><span class="line">-------------</span><br></pre></td></tr></table></figure>
-<p>任何数量的 = 和 - 都可以有效果</p>
-<h4 id="在行首插入-1-到-6-个-，对应到标题-1-到-6-阶，例如："><a href="#在行首插入-1-到-6-个-，对应到标题-1-到-6-阶，例如：" class="headerlink" title="在行首插入 1 到 6 个 # ，对应到标题 1 到 6 阶，例如："></a>在行首插入 1 到 6 个 # ，对应到标题 1 到 6 阶，例如：</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 这是 H1</span><br><span class="line"></span><br><span class="line">## 这是 H2</span><br><span class="line"></span><br><span class="line">###### 这是 H6</span><br></pre></td></tr></table></figure>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>在每行的最前面加上 &gt;<br>Markdown 也允许你偷懒只在整个段落的第一行最前面加上 &gt;<br>引用的区块内也可以使用其他的 Markdown 语法</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; ## 这是一个标题。</span><br><span class="line">&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,</span><br><span class="line">consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.</span><br><span class="line">Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</span><br><span class="line"></span><br><span class="line">&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse</span><br><span class="line">id sem consectetuer libero luctus adipiscing.</span><br></pre></td></tr></table></figure>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>Markdown 支持有序列表和无序列表。</p>
-<p>无序列表使用星号、加号或是减号作为列表标记：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*   Red</span><br><span class="line">*   Green</span><br><span class="line">*   Blue</span><br></pre></td></tr></table></figure>
-<p>有序列表则使用数字接着一个英文句点:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.  Bird</span><br><span class="line">2.  McHale</span><br><span class="line">3.  Parish</span><br></pre></td></tr></table></figure>
-<p>列表项目可以包含多个段落，每个项目下的段落都必须缩进 4 个空格或是 1 个制表符：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">*   This is a list item with two paragraphs.</span><br><span class="line"></span><br><span class="line">    This is the second paragraph in the list item. You're</span><br><span class="line">only required to indent the first line. Lorem ipsum dolor</span><br><span class="line">sit amet, consectetuer adipiscing elit.</span><br><span class="line"></span><br><span class="line">*   Another item in the same list.</span><br></pre></td></tr></table></figure>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>使用4个空格或者tab<br>    这是一个普通段落：</p>
-<pre><code>这是一个代码区块。
-</code></pre><p>或者使用反引号</p>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">* * *</span><br><span class="line"></span><br><span class="line">***</span><br><span class="line"></span><br><span class="line">*****</span><br><span class="line"></span><br><span class="line">- - -</span><br><span class="line"></span><br><span class="line">---------------------------------------</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>Markdown中有两种方式，实现链接，分别为内联方式和引用方式。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">内联方式：This is an [example link](http://example.com/).</span><br><span class="line">引用方式：</span><br><span class="line">I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].</span><br><span class="line"></span><br><span class="line">[1]: http://google.com/        "Google"</span><br><span class="line">[2]: http://search.yahoo.com/  "Yahoo Search"</span><br><span class="line">[3]: http://search.msn.com/    "MSN Search"</span><br></pre></td></tr></table></figure></p>
-<p>内联方式：This is an <a href="http://example.com/" target="_blank" rel="noopener">example link</a>.<br>引用方式：<br>I get 10 times more traffic from <a href="http://google.com/" title="Google" target="_blank" rel="noopener">Google</a> than from <a href="http://search.yahoo.com/" title="Yahoo Search" target="_blank" rel="noopener">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search" target="_blank" rel="noopener">MSN</a>.</p>
-<h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">http:</span>//<span class="attr">example.com</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-<p><a href="http://example.com/" target="_blank" rel="noopener">http://example.com/</a></p>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>图片的处理方式和链接的处理方式，非常的类似。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">内联方式：![alt text](https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png "Title")</span><br><span class="line">引用方式：</span><br><span class="line">![alt text][id]</span><br><span class="line"></span><br><span class="line">[id]: https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png "Title"</span><br></pre></td></tr></table></figure>
-<p>内联方式：<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" alt="alt text" title="Title"><br>引用方式：<br><img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" alt="alt text" title="Title"></p>
-<h2 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h2><p>Markdown 使用星号（<em>）和底线（_）作为标记强调字词的符号，被 </em> 或 _ 包围的字词会被转成用 <em> 标签包围，用两个 * 或 _ 包起来的话，则会被转成 <strong>，例如：</strong></em></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">*single asterisks*</span><br><span class="line"></span><br><span class="line">_single underscores_</span><br><span class="line"></span><br><span class="line">**double asterisks**</span><br><span class="line"></span><br><span class="line">__double underscores__</span><br></pre></td></tr></table></figure>
-<p>你可以随便用你喜欢的样式，唯一的限制是，你用什么符号开启标签，就要用什么符号结束。<br>但是如果你的 * 和 _ 两边都有空白的话，它们就只会被当成普通的符号。<br>如果要在文字前后直接插入普通的星号或底线，你可以用反斜线</p>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> markdown </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[ios 冒泡 bug]]></title>
-      <url>http://yfyld.online/iosBug1/</url>
+      <url>http://blog.yfyld.online/iosBug1/</url>
       <content type="html"><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.on(<span class="string">'click'</span>,<span class="string">'.aaa'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//如果.aaa不是img a 的时候不触发</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>在ios里点击事件,使用事件代理到 <code>document</code> 或<code>body</code>,不能触发<br><a id="more"></a></p>
 <h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>ios 系统bug</p>
@@ -242,7 +193,7 @@
     
     <entry>
       <title><![CDATA[markdown 语法]]></title>
-      <url>http://yfyld.online/canvasAPI/</url>
+      <url>http://blog.yfyld.online/canvasAPI/</url>
       <content type="html"><![CDATA[<h1 id="兼容HTML"><a href="#兼容HTML" class="headerlink" title="兼容HTML"></a>兼容HTML</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//这是一个普通table。</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>Foo<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"></span><br><span class="line">//这是另一个普通table。</span><br></pre></td></tr></table></figure>
 <p>请注意，在 HTML 区块标签间的 Markdown 格式语法将不会被处理。比如，你在 HTML 区块内使用 Markdown 样式的<em>强调</em>会没有效果。</p>
 <a id="more"></a>
@@ -290,8 +241,57 @@
     </entry>
     
     <entry>
+      <title><![CDATA[markdown 语法1]]></title>
+      <url>http://blog.yfyld.online/one/</url>
+      <content type="html"><![CDATA[<h1 id="兼容HTML"><a href="#兼容HTML" class="headerlink" title="兼容HTML"></a>兼容HTML</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//这是一个普通table。</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>Foo<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"></span><br><span class="line">//这是另一个普通table。</span><br></pre></td></tr></table></figure>
+<p>请注意，在 HTML 区块标签间的 Markdown 格式语法将不会被处理。比如，你在 HTML 区块内使用 Markdown 样式的<em>强调</em>会没有效果。</p>
+<a id="more"></a>
+<h1 id="特殊字符自动转换"><a href="#特殊字符自动转换" class="headerlink" title="特殊字符自动转换"></a>特殊字符自动转换</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span>&lt;<span class="number">5</span></span><br></pre></td></tr></table></figure>
+<p>Markdown 将会把它转换为：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span> &amp;lt; <span class="number">5</span></span><br></pre></td></tr></table></figure>
+<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><h2 id="段落-换行"><a href="#段落-换行" class="headerlink" title="段落/换行"></a>段落/换行</h2><p>在插入处先按入两个以上的空格然后回车</p>
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>Markdown 支持两种标题的语法</p>
+<h4 id="用底线的形式，利用-（最高阶标题）和-（第二阶标题），例如："><a href="#用底线的形式，利用-（最高阶标题）和-（第二阶标题），例如：" class="headerlink" title="用底线的形式，利用 = （最高阶标题）和 - （第二阶标题），例如："></a>用底线的形式，利用 = （最高阶标题）和 - （第二阶标题），例如：</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">This is an H1</span><br><span class="line">=============</span><br><span class="line"></span><br><span class="line">This is an H2</span><br><span class="line">-------------</span><br></pre></td></tr></table></figure>
+<p>任何数量的 = 和 - 都可以有效果</p>
+<h4 id="在行首插入-1-到-6-个-，对应到标题-1-到-6-阶，例如："><a href="#在行首插入-1-到-6-个-，对应到标题-1-到-6-阶，例如：" class="headerlink" title="在行首插入 1 到 6 个 # ，对应到标题 1 到 6 阶，例如："></a>在行首插入 1 到 6 个 # ，对应到标题 1 到 6 阶，例如：</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 这是 H1</span><br><span class="line"></span><br><span class="line">## 这是 H2</span><br><span class="line"></span><br><span class="line">###### 这是 H6</span><br></pre></td></tr></table></figure>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>在每行的最前面加上 &gt;<br>Markdown 也允许你偷懒只在整个段落的第一行最前面加上 &gt;<br>引用的区块内也可以使用其他的 Markdown 语法</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt; ## 这是一个标题。</span><br><span class="line">&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,</span><br><span class="line">consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.</span><br><span class="line">Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</span><br><span class="line"></span><br><span class="line">&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse</span><br><span class="line">id sem consectetuer libero luctus adipiscing.</span><br></pre></td></tr></table></figure>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>Markdown 支持有序列表和无序列表。</p>
+<p>无序列表使用星号、加号或是减号作为列表标记：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*   Red</span><br><span class="line">*   Green</span><br><span class="line">*   Blue</span><br></pre></td></tr></table></figure>
+<p>有序列表则使用数字接着一个英文句点:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.  Bird</span><br><span class="line">2.  McHale</span><br><span class="line">3.  Parish</span><br></pre></td></tr></table></figure>
+<p>列表项目可以包含多个段落，每个项目下的段落都必须缩进 4 个空格或是 1 个制表符：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">*   This is a list item with two paragraphs.</span><br><span class="line"></span><br><span class="line">    This is the second paragraph in the list item. You're</span><br><span class="line">only required to indent the first line. Lorem ipsum dolor</span><br><span class="line">sit amet, consectetuer adipiscing elit.</span><br><span class="line"></span><br><span class="line">*   Another item in the same list.</span><br></pre></td></tr></table></figure>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>使用4个空格或者tab<br>    这是一个普通段落：</p>
+<pre><code>这是一个代码区块。
+</code></pre><p>或者使用反引号</p>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">* * *</span><br><span class="line"></span><br><span class="line">***</span><br><span class="line"></span><br><span class="line">*****</span><br><span class="line"></span><br><span class="line">- - -</span><br><span class="line"></span><br><span class="line">---------------------------------------</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>Markdown中有两种方式，实现链接，分别为内联方式和引用方式。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">内联方式：This is an [example link](http://example.com/).</span><br><span class="line">引用方式：</span><br><span class="line">I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].</span><br><span class="line"></span><br><span class="line">[1]: http://google.com/        "Google"</span><br><span class="line">[2]: http://search.yahoo.com/  "Yahoo Search"</span><br><span class="line">[3]: http://search.msn.com/    "MSN Search"</span><br></pre></td></tr></table></figure></p>
+<p>内联方式：This is an <a href="http://example.com/" target="_blank" rel="noopener">example link</a>.<br>引用方式：<br>I get 10 times more traffic from <a href="http://google.com/" title="Google" target="_blank" rel="noopener">Google</a> than from <a href="http://search.yahoo.com/" title="Yahoo Search" target="_blank" rel="noopener">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search" target="_blank" rel="noopener">MSN</a>.</p>
+<h2 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">http:</span>//<span class="attr">example.com</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<p><a href="http://example.com/" target="_blank" rel="noopener">http://example.com/</a></p>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>图片的处理方式和链接的处理方式，非常的类似。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">内联方式：![alt text](https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png "Title")</span><br><span class="line">引用方式：</span><br><span class="line">![alt text][id]</span><br><span class="line"></span><br><span class="line">[id]: https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png "Title"</span><br></pre></td></tr></table></figure>
+<p>内联方式：<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" alt="alt text" title="Title"><br>引用方式：<br><img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" alt="alt text" title="Title"></p>
+<h2 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h2><p>Markdown 使用星号（<em>）和底线（_）作为标记强调字词的符号，被 </em> 或 _ 包围的字词会被转成用 <em> 标签包围，用两个 * 或 _ 包起来的话，则会被转成 <strong>，例如：</strong></em></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">*single asterisks*</span><br><span class="line"></span><br><span class="line">_single underscores_</span><br><span class="line"></span><br><span class="line">**double asterisks**</span><br><span class="line"></span><br><span class="line">__double underscores__</span><br></pre></td></tr></table></figure>
+<p>你可以随便用你喜欢的样式，唯一的限制是，你用什么符号开启标签，就要用什么符号结束。<br>但是如果你的 * 和 _ 两边都有空白的话，它们就只会被当成普通的符号。<br>如果要在文字前后直接插入普通的星号或底线，你可以用反斜线</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> markdown </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[markdown 语法]]></title>
-      <url>http://yfyld.online/canvasDemo/</url>
+      <url>http://blog.yfyld.online/canvasDemo/</url>
       <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a><canvas></canvas></h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"canvas"</span> <span class="attr">width</span>=<span class="string">"100"</span> <span class="attr">height</span>=<span class="string">"100"</span>&gt;</span>该浏览器不支持canvas<span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>没有设置<code>width</code>,<code>height</code>canvas会初始化宽度为300像素和高度为150像素。</li>
@@ -324,7 +324,7 @@
     
     <entry>
       <title><![CDATA[markdown 语法]]></title>
-      <url>http://yfyld.online/markdown/</url>
+      <url>http://blog.yfyld.online/markdown/</url>
       <content type="html"><![CDATA[<h1 id="Cmd-Markdown-简明语法手册"><a href="#Cmd-Markdown-简明语法手册" class="headerlink" title="Cmd Markdown 简明语法手册"></a>Cmd Markdown 简明语法手册</h1><p>标签： Cmd-Markdown</p>
 <hr>
 <h3 id="1-斜体和粗体"><a href="#1-斜体和粗体" class="headerlink" title="1. 斜体和粗体"></a>1. 斜体和粗体</h3><p>使用 * 和 ** 表示斜体和粗体。</p>
